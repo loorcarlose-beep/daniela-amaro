@@ -21,6 +21,7 @@ a{color:#9E4A5C}
 a:hover{color:#7E3346}
 *{box-sizing:border-box}
 img,video{max-width:100%}
+@supports not (overflow: clip){html,body{overflow-x:hidden}}
 .serif{font-family:"Kepler Std Display","Kepler Std","kepler-std-display","Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:500}
 .num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
 .btn{transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s ease,background-color .4s ease}
@@ -137,7 +138,7 @@ to{transform:scaleX(1)}
 <style>section[id]{scroll-margin-top:72px}</style>
 </head>
 <body>
-<div class="page" style="font-family: Sora, system-ui, sans-serif; color: #4B2E35; background: #FBF7F6; overflow-x: hidden; width: 100%">
+<div class="page" style="font-family: Sora, system-ui, sans-serif; color: #4B2E35; background: #FBF7F6; overflow-x: clip; width: 100%">
 
 <!-- NAV -->
 <header style="position: sticky; top: 0; z-index: 20; background: rgba(251,247,246,0.86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(191,104,117,0.14)">
