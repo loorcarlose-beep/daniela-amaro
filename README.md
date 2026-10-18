@@ -19,6 +19,7 @@ Sitio estático (HTML + CSS + JS, sin compilación). Todo está en `index.html` 
 
 ## Tipografías
 - Sora va incluida en `assets/fonts`.
+- Dominio: https://amarodaniela.com (daniela-amaro.vercel.app y www redirigen aquí).
 - Kepler Std se carga desde el kit web de Adobe Fonts `jpy5qtc` (dominios: amarodaniela.com, www.amarodaniela.com, daniela-amaro.vercel.app, *.vercel.app, localhost).
   Si conectas un dominio propio, agrégalo al kit en fonts.adobe.com → Web Projects.
   Mientras carga, o si el kit falla, se muestra Cormorant Garamond.

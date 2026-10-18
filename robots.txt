@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://daniela-amaro.vercel.app/sitemap.xml
+Sitemap: https://amarodaniela.com/sitemap.xml
