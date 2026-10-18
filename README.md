@@ -18,7 +18,10 @@ Sitio estático (HTML + CSS + JS, sin compilación). Todo está en `index.html` 
 4. Cada cambio que subas a GitHub se publica solo.
 
 ## Tipografías
-- Sora se carga desde Google Fonts.
-- Kepler Std se usa si está instalada en el dispositivo; si no, se muestra Cormorant Garamond.
-  Para que todos vean Kepler, crea un kit web en Adobe Fonts (fonts.adobe.com → Web Projects),
-  agrega Kepler Std y pega el `<link>` del kit dentro de `<head>` en `index.html`.
+- Sora va incluida en `assets/fonts`.
+- Kepler Std se carga desde el kit web de Adobe Fonts `ajz6lrn` (dominios: daniela-amaro.vercel.app, *.vercel.app, localhost).
+  Si conectas un dominio propio, agrégalo al kit en fonts.adobe.com → Web Projects.
+  Mientras carga, o si el kit falla, se muestra Cormorant Garamond.
+
+## Estadísticas
+- Vercel Web Analytics: en vercel.com → proyecto → Analytics → Enable.
