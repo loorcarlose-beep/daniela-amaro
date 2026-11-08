@@ -79,6 +79,15 @@ La página muestra quién es Daniela, su audiencia, su trabajo reciente y las ma
 
 ## 5. La web, sección por sección (en orden)
 
+> **Cambios de noviembre de 2026 (rama `mejoras-estructura`):**
+> - **Nuevo orden:** Inicio → franja → Reels → Marcas → Audiencia → Servicios → Sobre mí → Contacto. El menú sigue ese mismo orden: Reels · Audiencia · Servicios · Sobre mí.
+> - **Galería eliminada.** Sus fotos siguen en `assets/` por si se quiere recuperar.
+> - **Inicio:** el antetítulo dice "// Modelo y creadora de contenido · Barquisimeto" (en el celular, sin "Barquisimeto"). La animación de entrada es más corta.
+> - **Audiencia:** se añadió "Actualizado: noviembre 2026". En el celular las cifras van compactas (1 tarjeta grande + 2 pequeñas) y se oculta el gráfico circular, que repetía las barras.
+> - **Servicios:** cada servicio tiene su botón de WhatsApp con el mensaje ya escrito (Lo quiero / Quiero cotizar / Quiero esta alianza / Consultar fecha).
+> - **Sobre mí:** pasó al final, con un fondo que se funde con Contacto. En el celular se ocultan las 4 tarjetas.
+> - Las secciones 5.3–5.8 de abajo describen el contenido, que no cambió; manda el orden de esta nota.
+
 ### 5.1 Encabezado fijo
 - A la izquierda, "Daniela Amaro" en Kepler. A la derecha, el botón **"Trabajemos juntos"**, que lleva a Contacto.
 - En computadora también hay menú: Sobre mí · Audiencia · Reels · Servicios.
@@ -234,6 +243,8 @@ Hay seis reels de colaboraciones con marcas. Se ven como tarjetas con el video e
 ---
 
 ## 7. Pendientes e ideas
+
+0. **El PDF del media kit tiene precios viejos** (Reel $50, Embajadora $150, etc.). No ofrecerlo para descargar hasta rehacerlo con los precios de la web.
 
 1. **Activar Vercel Analytics** (Vercel → Analytics → Enable). Mientras tanto, la web muestra un error interno invisible que no afecta nada.
 2. **Google Search Console:** dar de alta amarodaniela.com, agregar el código de verificación a la web y enviar el sitemap.

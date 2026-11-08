@@ -57,10 +57,15 @@ img,video{max-width:100%}
 .navlink{text-decoration:none;color:#5B3940}
 .navlink:hover{color:#9E4A5C}
 .show-sm{display:none}
+.wab{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 22px;border-radius:999px;background:#A9546A;color:#FFFFFF;text-decoration:none;font-size:14px;font-weight:600}
+.wab:hover{color:#FFFFFF}
+.wab-l{background:#FFFFFF;color:#8C4255}
+.wab-l:hover{color:#7E3346}
+
 
 /* ---------- carga inicial del hero ---------- */
 @keyframes fadeUp{
-from{opacity:0;transform:translateY(28px);filter:blur(8px)}
+from{opacity:0;transform:translateY(20px);filter:blur(4px)}
 to{opacity:1;transform:none;filter:blur(0)}
 }
 @keyframes heroUp{
@@ -68,7 +73,7 @@ from{opacity:.02;transform:translateY(24px)}
 to{opacity:1;transform:none}
 }
 @keyframes heroIn{
-from{opacity:0;transform:translateY(40px) scale(.97)}
+from{opacity:.15;transform:translateY(24px) scale(.98)}
 to{opacity:1;transform:none}
 }
 @keyframes floaty{
@@ -98,11 +103,11 @@ to{transform:scaleX(1)}
 50%{transform:translateX(6px)}
 100%{transform:translateX(0)}
 }
-.in1{animation:fadeUp 1.2s cubic-bezier(.2,.7,.2,1) .15s both}
-.in2{animation:heroUp 1.2s cubic-bezier(.2,.7,.2,1) .2s both}
-.in3{animation:fadeUp 1.2s cubic-bezier(.2,.7,.2,1) .55s both}
-.in4{animation:fadeUp 1.2s cubic-bezier(.2,.7,.2,1) .75s both}
-.heroimg{animation:heroIn 1.6s cubic-bezier(.2,.7,.2,1) .2s both}
+.in1{animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) .05s both}
+.in2{animation:heroUp .8s cubic-bezier(.2,.7,.2,1) .1s both}
+.in3{animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) .25s both}
+.in4{animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) .35s both}
+.heroimg{animation:heroIn 1s cubic-bezier(.2,.7,.2,1) 0s both}
 .float1{animation:floaty 6s ease-in-out 1.6s infinite}
 .float2{animation:floaty 7s ease-in-out 2.2s infinite}
 .marquee{animation:marquee 38s linear infinite}
@@ -191,6 +196,18 @@ to{transform:scaleX(1)}
 .topbar{background:rgba(251,247,246,0.97) !important;backdrop-filter:none !important;-webkit-backdrop-filter:none !important}
 .statcard{min-height:0 !important;gap:14px !important;backdrop-filter:none !important;-webkit-backdrop-filter:none !important}
 .statcard span.num{font-size:54px !important}
+.sgrid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:10px !important}
+.sgrid > :first-child{grid-column:1 / -1}
+.sgrid .statcard{padding:18px !important;border-radius:22px !important;gap:10px !important;justify-content:flex-start !important}
+.sgrid .statcard > span:first-child{font-size:10.5px !important;letter-spacing:.14em !important}
+.sgrid .statcard:not(:first-child) span.num{font-size:38px !important}
+.sgrid .statcard span:not(.num):not(.cnt):last-child{font-size:12.5px !important}
+.donut{display:none !important}
+.hide-sm{display:none}
+#sobre-mi .acards{display:none !important}
+.wab{align-self:stretch;justify-content:center}
+.sg4 .wab{flex:1 1 100%}
+
 .hstats{gap:8px !important}
 .hstats > div > span:not(.serif){font-size:9.5px !important;letter-spacing:.04em !important}
 .acards{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:10px !important}
@@ -226,10 +243,10 @@ footer > div{flex-direction:column;justify-content:center !important;text-align:
 <nav style="max-width: 1240px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px 28px">
 <a href="#inicio" class="serif" style="font-size: clamp(22px, 5vw, 28px); color: #A9546A; text-decoration: none; line-height: 1; white-space: nowrap">Daniela Amaro</a>
 <div style="display: flex; align-items: center; gap: 28px; font-size: 14px; letter-spacing: 0.02em">
-<a href="#sobre-mi" class="navlink">Sobre mí</a>
-<a href="#audiencia" class="navlink">Audiencia</a>
 <a href="#reels" class="navlink">Reels</a>
+<a href="#audiencia" class="navlink">Audiencia</a>
 <a href="#servicios" class="navlink">Servicios</a>
+<a href="#sobre-mi" class="navlink">Sobre mí</a>
 <a href="#contacto" class="btn navcta" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; border-radius: 999px; background: #A9546A; color: #FFFFFF; text-decoration: none; font-weight: 500; white-space: nowrap">Trabajemos juntos</a>
 </div>
 </nav>
@@ -240,7 +257,7 @@ footer > div{flex-direction:column;justify-content:center !important;text-align:
 <section id="inicio" style="position: relative; background: linear-gradient(180deg, #EBCDD2 0%, #F3E0E3 58%, #FBF7F6 100%); padding: clamp(36px, 7vw, 72px) 20px clamp(32px, 5vw, 48px)">
 <div style="max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: clamp(36px, 5vw, 48px)">
 <div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: clamp(18px, 3vw, 26px)">
-<p class="in1" style="margin: 0; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #8C4255; font-weight: 500">// Media Kit · Barquisimeto, Venezuela</p>
+<p class="in1" style="margin: 0; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #8C4255; font-weight: 500">// Modelo y creadora de contenido<span class="hide-sm"> · Barquisimeto</span></p>
 <h1 class="serif in2" style="margin: 0; font-size: clamp(66px, 9vw, 132px); line-height: 0.92; color: #A9546A; letter-spacing: -0.01em">Daniela<br>Amaro</h1>
 <p class="in3" style="margin: 0; font-size: clamp(16px, 1.6vw, 20px); line-height: 1.65; color: #5B3940; max-width: 480px; font-weight: 300">Licenciada en Comunicación Social y creadora de contenido. Creo piezas para marcas que no solo se ven bien: <strong style="font-weight: 600; color: #8C4255">se sienten cercanas y genuinas.</strong></p>
 <div class="in4" style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px">
@@ -296,33 +313,323 @@ footer > div{flex-direction:column;justify-content:center !important;text-align:
 </div>
 </section>
 
-<!-- GALLERY -->
-<section aria-label="Galería" style="padding: clamp(64px, 9vw, 110px) 20px clamp(20px, 4vw, 40px)">
-<div style="max-width: 1240px; margin: 0 auto">
-<div class="snap" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: center">
-<div class="drift" style="display: flex; flex-direction: column">
-<div class="photo rv-img" data-rv="g1" style="border-radius: 24px; overflow: hidden; aspect-ratio: 4 / 5; background: #EED6DA">
-<img src="assets/galeria-1-900.a52aa7a7.webp" srcset="assets/galeria-1-480.86e9e308.webp 480w, assets/galeria-1-640.f737bfb7.webp 640w, assets/galeria-1-900.a52aa7a7.webp 900w" sizes="(max-width: 760px) 76vw, 400px" alt="Daniela Amaro sentada en sesión de estudio" style="width: 100%; height: 100%; object-fit: cover; display: block" width="900" height="1125" loading="lazy" decoding="async">
+<!-- REELS -->
+<section id="reels" aria-label="Contenido reciente" style="padding: clamp(72px, 10vw, 120px) 20px 0">
+<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px">
+<p class="rv" data-rv="rEy" style="margin: 0; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #8C4255; font-weight: 500">Contenido reciente</p>
+<h2 class="serif mask" data-rv="rTitle" style="margin: 0; font-size: clamp(42px, 5vw, 68px); line-height: 1; color: #A9546A"><span class="ln d1">Así cuento historias</span></h2>
+<p class="rv d2" data-rv="rSub" style="margin: 0; font-size: 16px; line-height: 1.7; color: #5B3940; max-width: 520px; font-weight: 300">Algunas colaboraciones recientes con marcas: guion propio, estética cuidada y una comunidad que responde.</p>
+<div class="stag snap" style="width: 100%; max-width: 980px; margin-top: 26px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; text-align: left">
+<a href="https://www.instagram.com/p/Dd2GrdCzD_O/" target="_blank" rel="noopener" aria-label="Ver el reel con Casa Condimentos en Instagram" class="reel lift rv-pop" data-rv="reels" style="position: relative; display: block; aspect-ratio: 9 / 16; border-radius: 26px; overflow: hidden; background: #D995A3; color: #FFFFFF; text-decoration: none; box-shadow: 0 30px 60px -40px rgba(120,52,68,0.6)">
+<video src="assets/reel-casa-condimentos.b2ef0b3a.mp4" poster="assets/reel-casa-condimentos.163f4b5d.webp" muted loop playsinline preload="metadata" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></video>
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(60,22,32,0.35) 0%, rgba(60,22,32,0) 26%, rgba(60,22,32,0) 55%, rgba(60,22,32,0.78) 100%)"></span>
+<span style="position: absolute; top: 14px; left: 14px; font-size: 11px; letter-spacing: 0.06em; padding: 6px 11px; border-radius: 999px; background: rgba(255,255,255,0.22); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px)">@casa_condimentos28</span>
+<span style="position: absolute; left: 16px; right: 16px; bottom: 16px; display: flex; align-items: flex-end; justify-content: space-between; gap: 10px">
+<span style="display: flex; flex-direction: column; gap: 3px"><span style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #FFF4F6">Reel 01 · Alimentos</span><span class="serif" style="font-size: 24px; line-height: 1.05">Casa Condimentos</span></span>
+<span style="flex: none; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.22); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
+</span>
+</a>
+<a href="https://www.instagram.com/p/DcMsLsvhk-e/" target="_blank" rel="noopener" aria-label="Ver el reel con NOW en Instagram" class="reel lift rv-pop" data-rv="reels" style="position: relative; display: block; aspect-ratio: 9 / 16; border-radius: 26px; overflow: hidden; background: #C97E8F; color: #FFFFFF; text-decoration: none; box-shadow: 0 30px 60px -40px rgba(120,52,68,0.6)">
+<video src="assets/reel-now.ff3bad1c.mp4" poster="assets/reel-now.36637d4c.webp" muted loop playsinline preload="metadata" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></video>
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(60,22,32,0.35) 0%, rgba(60,22,32,0) 26%, rgba(60,22,32,0) 55%, rgba(60,22,32,0.78) 100%)"></span>
+<span style="position: absolute; top: 14px; left: 14px; font-size: 11px; letter-spacing: 0.06em; padding: 6px 11px; border-radius: 999px; background: rgba(255,255,255,0.22); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px)">@nowappve</span>
+<span style="position: absolute; left: 16px; right: 16px; bottom: 16px; display: flex; align-items: flex-end; justify-content: space-between; gap: 10px">
+<span style="display: flex; flex-direction: column; gap: 3px"><span style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #FFF4F6">Reel 02 · Movilidad</span><span class="serif" style="font-size: 24px; line-height: 1.05">NOW</span></span>
+<span style="flex: none; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.22); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
+</span>
+</a>
+<a href="https://www.instagram.com/p/DadQ-z5xkLG/" target="_blank" rel="noopener" aria-label="Ver el reel con Motores VMJ en Instagram" class="reel lift rv-pop" data-rv="reels" style="position: relative; display: block; aspect-ratio: 9 / 16; border-radius: 26px; overflow: hidden; background: #A9546A; color: #FFFFFF; text-decoration: none; box-shadow: 0 30px 60px -40px rgba(120,52,68,0.6)">
+<video src="assets/reel-motores-vmj.b1ff5500.mp4" poster="assets/reel-motores-vmj.7010f82d.webp" muted loop playsinline preload="metadata" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></video>
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(60,22,32,0.35) 0%, rgba(60,22,32,0) 26%, rgba(60,22,32,0) 55%, rgba(60,22,32,0.78) 100%)"></span>
+<span style="position: absolute; top: 14px; left: 14px; font-size: 11px; letter-spacing: 0.06em; padding: 6px 11px; border-radius: 999px; background: rgba(255,255,255,0.22); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px)">@motoresvmjla42</span>
+<span style="position: absolute; left: 16px; right: 16px; bottom: 16px; display: flex; align-items: flex-end; justify-content: space-between; gap: 10px">
+<span style="display: flex; flex-direction: column; gap: 3px"><span style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #FFF4F6">Reel 03 · Automotriz</span><span class="serif" style="font-size: 24px; line-height: 1.05">Motores VMJ</span></span>
+<span style="flex: none; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.22); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
+</span>
+</a>
+<a href="https://www.instagram.com/p/DYDf2sMobbS/" target="_blank" rel="noopener" aria-label="Ver el reel con Tiendas Montana en Instagram" class="reel lift rv-pop" data-rv="reels" style="position: relative; display: block; aspect-ratio: 9 / 16; border-radius: 26px; overflow: hidden; background: #B96A7D; color: #FFFFFF; text-decoration: none; box-shadow: 0 30px 60px -40px rgba(120,52,68,0.6)">
+<video src="assets/reel-tiendas-montana.63936bfc.mp4" poster="assets/reel-tiendas-montana.d5e63fe7.webp" muted loop playsinline preload="metadata" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></video>
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(60,22,32,0.35) 0%, rgba(60,22,32,0) 26%, rgba(60,22,32,0) 55%, rgba(60,22,32,0.78) 100%)"></span>
+<span style="position: absolute; top: 14px; left: 14px; font-size: 11px; letter-spacing: 0.06em; padding: 6px 11px; border-radius: 999px; background: rgba(255,255,255,0.22); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px)">@tiendasmontanalancolor</span>
+<span style="position: absolute; left: 16px; right: 16px; bottom: 16px; display: flex; align-items: flex-end; justify-content: space-between; gap: 10px">
+<span style="display: flex; flex-direction: column; gap: 3px"><span style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #FFF4F6">Reel 04 · Hogar</span><span class="serif" style="font-size: 24px; line-height: 1.05">Tiendas Montana</span></span>
+<span style="flex: none; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.22); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
+</span>
+</a>
+<a href="https://www.instagram.com/p/DWpTJYoJXmr/" target="_blank" rel="noopener" aria-label="Ver el reel con Sazonova en Instagram" class="reel lift rv-pop" data-rv="reels" style="position: relative; display: block; aspect-ratio: 9 / 16; border-radius: 26px; overflow: hidden; background: #D995A3; color: #FFFFFF; text-decoration: none; box-shadow: 0 30px 60px -40px rgba(120,52,68,0.6)">
+<video src="assets/reel-sazonova.b72207e0.mp4" poster="assets/reel-sazonova.6b2e199e.webp" muted loop playsinline preload="metadata" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></video>
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(60,22,32,0.35) 0%, rgba(60,22,32,0) 26%, rgba(60,22,32,0) 55%, rgba(60,22,32,0.78) 100%)"></span>
+<span style="position: absolute; top: 14px; left: 14px; font-size: 11px; letter-spacing: 0.06em; padding: 6px 11px; border-radius: 999px; background: rgba(255,255,255,0.22); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px)">@sazonovave</span>
+<span style="position: absolute; left: 16px; right: 16px; bottom: 16px; display: flex; align-items: flex-end; justify-content: space-between; gap: 10px">
+<span style="display: flex; flex-direction: column; gap: 3px"><span style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #FFF4F6">Reel 05 · Alimentos</span><span class="serif" style="font-size: 24px; line-height: 1.05">Sazonova</span></span>
+<span style="flex: none; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.22); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
+</span>
+</a>
+<a href="https://www.instagram.com/p/DUZPELSiGoy/" target="_blank" rel="noopener" aria-label="Ver el reel con Remesas JJ en Instagram" class="reel lift rv-pop" data-rv="reels" style="position: relative; display: block; aspect-ratio: 9 / 16; border-radius: 26px; overflow: hidden; background: #C97E8F; color: #FFFFFF; text-decoration: none; box-shadow: 0 30px 60px -40px rgba(120,52,68,0.6)">
+<video src="assets/reel-remesas-jj.24d0aa0a.mp4" poster="assets/reel-remesas-jj.cd72d72c.webp" muted loop playsinline preload="metadata" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></video>
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(60,22,32,0.35) 0%, rgba(60,22,32,0) 26%, rgba(60,22,32,0) 55%, rgba(60,22,32,0.78) 100%)"></span>
+<span style="position: absolute; top: 14px; left: 14px; font-size: 11px; letter-spacing: 0.06em; padding: 6px 11px; border-radius: 999px; background: rgba(255,255,255,0.22); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px)">@remesasjj_</span>
+<span style="position: absolute; left: 16px; right: 16px; bottom: 16px; display: flex; align-items: flex-end; justify-content: space-between; gap: 10px">
+<span style="display: flex; flex-direction: column; gap: 3px"><span style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #FFF4F6">Reel 06 · Envíos</span><span class="serif" style="font-size: 24px; line-height: 1.05">Remesas JJ</span></span>
+<span style="flex: none; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.22); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
+</span>
+</a>
+</div>
+<p class="show-sm" style="margin: 0; justify-content: center; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #8C4255">Desliza <span class="nudge" aria-hidden="true" style="margin-left: 6px">→</span></p>
+<a href="https://instagram.com/amarodaniela_" target="_blank" rel="noopener" class="btn rv d2" data-rv="rBtn" style="margin-top: 10px; display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 24px; border-radius: 999px; background: #F3DDE1; color: #8C4255; text-decoration: none; font-size: 14px; font-weight: 600">Ver más en Instagram</a>
+</div>
+</section>
+
+<!-- MARCAS -->
+<section id="marcas" aria-label="Marcas" style="padding: clamp(72px, 10vw, 120px) 20px clamp(72px, 10vw, 120px)">
+<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px">
+<p class="rv" data-rv="bEy" style="margin: 0; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #8C4255; font-weight: 500">Marcas</p>
+<h2 class="serif mask" data-rv="bTitle" style="margin: 0; font-size: clamp(42px, 5vw, 68px); line-height: 1; color: #A9546A"><span class="ln d1">Han confiado en mí</span></h2>
+<p class="rv d2" data-rv="bSub" style="margin: 0; font-size: 16px; line-height: 1.7; color: #5B3940; max-width: 520px; font-weight: 300">Marcas de salud, belleza, alimentos y hogar que ya han trabajado conmigo.</p>
+<div class="lstrip rv" data-rv="bLogos" style="width: 100vw; margin: 24px calc(50% - 50vw) 0; overflow: hidden">
+<div class="marquee lmq" style="display: flex; width: max-content; padding: 4px 0">
+<div style="display: flex; gap: 14px; padding-right: 14px"><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-farmatodo.fb000612.svg" alt="Farmatodo" style="max-width: 100%; max-height: 54px; width: auto; height: auto; display: block" width="389" height="471" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-farmaclinica-verde.2fe7ef4a.svg" alt="Farmaclínica Verde" style="max-width: 100%; max-height: 43px; width: auto; height: auto; display: block" width="1275" height="324" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-natys.bcaaedf5.svg" alt="Naty's" style="max-width: 100%; max-height: 49px; width: auto; height: auto; display: block" width="634" height="368" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-sazonova.76085c29.svg" alt="Sazonova" style="max-width: 100%; max-height: 46px; width: auto; height: auto; display: block" width="790" height="259" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-hammer.2d108511.svg" alt="Hammer" style="max-width: 100%; max-height: 49px; width: auto; height: auto; display: block" width="620" height="329" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-cachapas-del-este.ae007d26.svg" alt="Cachapas del Este" style="max-width: 100%; max-height: 62px; width: auto; height: auto; display: block" width="703" height="674" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-rucha.133d2c99.svg" alt="Rucha" style="max-width: 100%; max-height: 39px; width: auto; height: auto; display: block" width="738" height="240" loading="lazy" decoding="async"></div></div>
+<div aria-hidden="true" style="display: flex; gap: 14px; padding-right: 14px"><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-farmatodo.fb000612.svg" alt="" style="max-width: 100%; max-height: 54px; width: auto; height: auto; display: block" width="389" height="471" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-farmaclinica-verde.2fe7ef4a.svg" alt="" style="max-width: 100%; max-height: 43px; width: auto; height: auto; display: block" width="1275" height="324" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-natys.bcaaedf5.svg" alt="" style="max-width: 100%; max-height: 49px; width: auto; height: auto; display: block" width="634" height="368" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-sazonova.76085c29.svg" alt="" style="max-width: 100%; max-height: 46px; width: auto; height: auto; display: block" width="790" height="259" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-hammer.2d108511.svg" alt="" style="max-width: 100%; max-height: 49px; width: auto; height: auto; display: block" width="620" height="329" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-cachapas-del-este.ae007d26.svg" alt="" style="max-width: 100%; max-height: 62px; width: auto; height: auto; display: block" width="703" height="674" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-rucha.133d2c99.svg" alt="" style="max-width: 100%; max-height: 39px; width: auto; height: auto; display: block" width="738" height="240" loading="lazy" decoding="async"></div></div>
+<div aria-hidden="true" style="display: flex; gap: 14px; padding-right: 14px"><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-farmatodo.fb000612.svg" alt="" style="max-width: 100%; max-height: 54px; width: auto; height: auto; display: block" width="389" height="471" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-farmaclinica-verde.2fe7ef4a.svg" alt="" style="max-width: 100%; max-height: 43px; width: auto; height: auto; display: block" width="1275" height="324" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-natys.bcaaedf5.svg" alt="" style="max-width: 100%; max-height: 49px; width: auto; height: auto; display: block" width="634" height="368" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-sazonova.76085c29.svg" alt="" style="max-width: 100%; max-height: 46px; width: auto; height: auto; display: block" width="790" height="259" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-hammer.2d108511.svg" alt="" style="max-width: 100%; max-height: 49px; width: auto; height: auto; display: block" width="620" height="329" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-cachapas-del-este.ae007d26.svg" alt="" style="max-width: 100%; max-height: 62px; width: auto; height: auto; display: block" width="703" height="674" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-rucha.133d2c99.svg" alt="" style="max-width: 100%; max-height: 39px; width: auto; height: auto; display: block" width="738" height="240" loading="lazy" decoding="async"></div></div>
 </div>
 </div>
-<div style="display: flex; flex-direction: column; gap: 18px">
-<div class="photo rv-img d2" data-rv="g2" style="border-radius: 200px 200px 24px 24px; overflow: hidden; aspect-ratio: 4 / 5; background: #EED6DA">
-<img src="assets/galeria-2-900.a3a9d0f7.webp" srcset="assets/galeria-2-480.e6a9b808.webp 480w, assets/galeria-2-640.910463c6.webp 640w, assets/galeria-2-900.a3a9d0f7.webp 900w" sizes="(max-width: 760px) 76vw, 400px" alt="Daniela Amaro de perfil" style="width: 100%; height: 100%; object-fit: cover; display: block" width="900" height="1125" loading="lazy" decoding="async">
+</div>
+</section>
+
+<!-- AUDIENCIA -->
+<section id="audiencia" style="position: relative; background: linear-gradient(180deg, #EBCDD2 0%, #E5BEC6 100%); padding: clamp(72px, 10vw, 120px) 20px; overflow: hidden">
+<div aria-hidden="true" style="position: absolute; right: -120px; top: -120px; width: 420px; height: 420px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.55)"></div>
+<div aria-hidden="true" style="position: absolute; left: -160px; bottom: -180px; width: 520px; height: 520px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.45)"></div>
+<div style="position: relative; max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: clamp(32px, 5vw, 48px)">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p class="rv" data-rv="audEy" style="margin: 0; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #7E3346; font-weight: 500">Audiencia</p>
+<h2 class="serif mask" data-rv="audTitle" style="margin: 0; font-size: clamp(40px, 5.5vw, 76px); line-height: 1; color: #7E3346"><span class="ln d1">Una comunidad que mira, siente y responde.</span></h2>
+</div>
+<p class="rv d2" data-rv="audNote" style="margin: 0; font-size: 13px; color: #6B3A45; max-width: 300px; line-height: 1.6">Datos de Instagram @amarodaniela_ · últimos 90 días<br>Actualizado: noviembre 2026</p>
+</div>
+
+<div class="sgrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 16px">
+<div class="lift rv statcard" data-rv="aud1" style="background: #A9546A; color: #FFFFFF; border-radius: 28px; padding: clamp(24px, 5vw, 34px); display: flex; flex-direction: column; justify-content: space-between; gap: 24px; min-height: 220px">
+<span style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #FFF4F6">Seguidores</span>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span class="num" style="font-size: clamp(60px, 7vw, 96px); font-weight: 600; letter-spacing: -0.04em; line-height: 0.9">+<span class="cnt" data-to="16.5" data-dec="1" data-sfx="K" data-comma="0">16.5K</span></span>
+<span style="font-size: 14px; color: #FFF4F6; line-height: 1.5">Comunidad orgánica en Instagram</span>
 </div>
 </div>
-<div class="drift" style="display: flex; flex-direction: column">
-<div class="photo rv-img d4" data-rv="g3" style="border-radius: 24px; overflow: hidden; aspect-ratio: 4 / 5; background: #EED6DA">
-<img src="assets/galeria-3-900.7a95582b.webp" srcset="assets/galeria-3-480.f6ce1afd.webp 480w, assets/galeria-3-640.b29672a3.webp 640w, assets/galeria-3-900.7a95582b.webp 900w" sizes="(max-width: 760px) 76vw, 400px" alt="Daniela Amaro en sesión editorial" style="width: 100%; height: 100%; object-fit: cover; display: block" width="900" height="1125" loading="lazy" decoding="async">
+<div class="lift rv d1 statcard" data-rv="aud2" style="background: rgba(255,255,255,0.75); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 28px; padding: clamp(24px, 5vw, 34px); display: flex; flex-direction: column; justify-content: space-between; gap: 24px; min-height: 220px">
+<span style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #8C4255">Visualizaciones</span>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span class="num" style="font-size: clamp(60px, 7vw, 96px); font-weight: 600; letter-spacing: -0.04em; line-height: 0.9; color: #7E3346"><span class="cnt" data-to="167" data-dec="0" data-sfx="K" data-comma="0">167K</span></span>
+<span style="font-size: 14px; color: #6B3A45; line-height: 1.5">Alcance <strong class="num" style="font-weight: 600"><span class="cnt" data-to="10" data-dec="0" data-sfx="" data-comma="0">10</span>×</strong> mayor que su comunidad</span>
+</div>
+</div>
+<div class="lift rv d2 statcard" data-rv="aud3" style="background: rgba(255,255,255,0.75); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 28px; padding: clamp(24px, 5vw, 34px); display: flex; flex-direction: column; justify-content: space-between; gap: 24px; min-height: 220px">
+<span style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #8C4255">Interacciones</span>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span class="num" style="font-size: clamp(60px, 7vw, 96px); font-weight: 600; letter-spacing: -0.04em; line-height: 0.9; color: #7E3346"><span class="cnt" data-to="8.4" data-dec="1" data-sfx="K" data-comma="0">8.4K</span></span>
+<span style="font-size: 14px; color: #6B3A45; line-height: 1.5">Likes, comentarios, guardados y compartidos</span>
 </div>
 </div>
 </div>
-<p class="serif rv" data-rv="gq" style="margin: 18px 0 0; text-align: center; font-size: 26px; color: #A9546A">comunicar es conectar</p>
-<p class="show-sm" style="margin: 6px 0 0; justify-content: center; width: 100%; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #8C4255">Desliza <span class="nudge" aria-hidden="true" style="margin-left: 6px">→</span></p>
+
+<div class="lift rv center-sm" data-rv="audSplit" data-progress style="background: #FFFFFF; border-radius: 28px; padding: clamp(24px, 5vw, 36px); display: flex; flex-wrap: wrap; align-items: center; gap: clamp(24px, 4vw, 40px)">
+<div class="donut" style="flex: 0 0 auto; position: relative; width: 180px; height: 180px; border-radius: 50%; background: conic-gradient(#A9546A 0deg calc(317.52deg * var(--p, 1)), #F3DDE1 calc(317.52deg * var(--p, 1)) 360deg)">
+<div style="position: absolute; inset: 20px; border-radius: 50%; background: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px">
+<span class="num" style="font-size: 36px; font-weight: 600; letter-spacing: -0.03em; color: #7E3346"><span class="cnt" data-to="88.2" data-dec="1" data-sfx="%" data-comma="1">88,2%</span></span>
+<span style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #8C4255">Mujeres</span>
+</div>
+</div>
+<div style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 20px; text-align: left">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<h3 class="serif" style="margin: 0; font-size: clamp(30px, 4vw, 36px); color: #A9546A; line-height: 1.05">Perfil de la audiencia</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #5B3940; font-weight: 300">Una comunidad mayoritariamente femenina: ideal para marcas de moda, belleza, bienestar y estilo de vida.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; justify-content: space-between; font-size: 14px"><span style="font-weight: 500">Femenina</span><span class="num" style="font-weight: 600; color: #7E3346"><span class="cnt" data-to="88.2" data-dec="1" data-sfx="%" data-comma="1">88,2%</span></span></div>
+<div style="height: 10px; border-radius: 999px; background: #F3DDE1; overflow: hidden"><div style="height: 100%; width: calc(88.2% * var(--p, 1)); border-radius: 999px; background: linear-gradient(90deg, #C77788, #A9546A)"></div></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; justify-content: space-between; font-size: 14px"><span style="font-weight: 500">Masculina</span><span class="num" style="font-weight: 600; color: #7E3346"><span class="cnt" data-to="11.8" data-dec="1" data-sfx="%" data-comma="1">11,8%</span></span></div>
+<div style="height: 10px; border-radius: 999px; background: #F3DDE1; overflow: hidden"><div style="height: 100%; width: calc(11.8% * var(--p, 1)); border-radius: 999px; background: linear-gradient(90deg, #DDA3AF, #C77788)"></div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" style="padding: clamp(72px, 10vw, 130px) 20px clamp(64px, 9vw, 110px)">
+<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: clamp(28px, 4vw, 44px)">
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px">
+<p class="rv" data-rv="sEy" style="margin: 0; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #8C4255; font-weight: 500">Servicios</p>
+<h2 class="serif mask" data-rv="sTitle" style="margin: 0; font-size: clamp(44px, 6vw, 84px); line-height: 1; color: #A9546A"><span class="ln d1">Hagamos crecer tu marca</span></h2>
+<p class="rv d2" data-rv="sSub" style="margin: 0; font-size: 16px; line-height: 1.7; color: #5B3940; max-width: 560px; font-weight: 300">Desde una mención puntual hasta una alianza de largo plazo. Elige el formato que mejor encaja con tu marca.</p>
+</div>
+
+<article class="sinc rv" data-rv="inc" style="position: relative; overflow: hidden; background: linear-gradient(150deg, #FFFFFF 0%, #F8ECEE 100%); border: 1px solid rgba(191,104,117,0.18); border-radius: 30px; padding: clamp(26px, 5vw, 44px); display: flex; flex-direction: column; gap: clamp(22px, 3vw, 30px)">
+<div aria-hidden="true" style="position: absolute; right: -90px; top: -90px; width: 280px; height: 280px; border-radius: 50%; border: 1px solid rgba(169,84,106,0.16)"></div>
+<div style="position: relative; display: flex; flex-direction: column; gap: 10px; max-width: 640px">
+<span style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #8C4255">Incluido en todos mis servicios</span>
+<h3 class="serif" style="margin: 0; font-size: clamp(32px, 4.5vw, 46px); line-height: 1.02; color: #A9546A">Más que grabar: pienso tu contenido contigo</h3>
+</div>
+<div class="stag" style="position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 14px">
+<div class="rv-pop" data-rv="incI" style="background: rgba(255,255,255,0.85); border-radius: 22px; padding: 22px; display: flex; flex-direction: column; gap: 10px">
+<span style="width: 44px; height: 44px; border-radius: 50%; background: #F3DDE1; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A9546A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"></path><path d="M10 21h4"></path><path d="M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"></path></svg></span>
+<span class="serif" style="font-size: 23px; line-height: 1.1; color: #A9546A">Asesoría creativa personalizada</span>
+<span style="font-size: 14px; line-height: 1.6; color: #5B3940">Te oriento sobre tendencias y el tipo de contenido que mejor le funciona a tu marca.</span>
+</div>
+<div class="rv-pop" data-rv="incI" style="background: rgba(255,255,255,0.85); border-radius: 22px; padding: 22px; display: flex; flex-direction: column; gap: 10px">
+<span style="width: 44px; height: 44px; border-radius: 50%; background: #F3DDE1; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A9546A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9l-4-4L4 16v4z"></path><path d="M13 7l4 4"></path></svg></span>
+<span class="serif" style="font-size: 23px; line-height: 1.1; color: #A9546A">Ideas y guiones propios</span>
+<span style="font-size: 14px; line-height: 1.6; color: #5B3940">Propongo ideas y escribo el guion, con la naturalidad que conecta con tu audiencia.</span>
+</div></div>
+</article>
+
+<div class="sbody" style="display: flex; flex-direction: column; gap: clamp(28px, 4vw, 44px)">
+<div class="stabs" role="group" aria-label="Tipo de servicio">
+<input type="radio" name="svt" id="svt1" class="svt"><label for="svt1">Contenido</label>
+<input type="radio" name="svt" id="svt2" class="svt"><label for="svt2">Modelo</label>
+<input type="radio" name="svt" id="svt3" class="svt"><label for="svt3">Alianzas</label>
+<input type="radio" name="svt" id="svt4" class="svt"><label for="svt4">Eventos</label>
+</div>
+
+<div class="sgrp sg1">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 16px">
+<article class="lift rv" data-rv="s1" style="background: #FFFFFF; border: 1px solid rgba(191,104,117,0.18); border-radius: 28px; padding: clamp(24px, 5vw, 34px); display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
+<h3 class="serif" style="margin: 0; font-size: clamp(28px, 4vw, 34px); line-height: 1.05; color: #A9546A">Reel orgánico</h3>
+<span class="num" style="font-size: clamp(34px, 5vw, 40px); font-weight: 600; letter-spacing: -0.03em; color: #7E3346; line-height: 1">$80</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #5B3940; font-weight: 300">Guion personalizado, edición y publicación en mi perfil, más menciones en historias. Con opción de publicarlo en colaboración, para que aparezca en tu feed y en el mío.</p>
+<div class="stag" style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto">
+<span class="rv-pop" data-rv="chips" style="font-size: 12px; padding: 7px 12px; border-radius: 999px; background: #F8ECEE; color: #8C4255">Guion + edición</span>
+<span class="rv-pop" data-rv="chips" style="font-size: 12px; padding: 7px 12px; border-radius: 999px; background: #F8ECEE; color: #8C4255">Menciones en historias</span>
+<span class="rv-pop" data-rv="chips" style="font-size: 12px; padding: 7px 12px; border-radius: 999px; background: #F8ECEE; color: #8C4255">60 días en el feed</span>
+<span class="rv-pop" data-rv="chips" style="font-size: 12px; padding: 7px 12px; border-radius: 999px; background: #F8ECEE; color: #8C4255">Opción de colab</span>
+</div>
+<a href="https://wa.me/584245625223?text=Hola%20Daniela%2C%20vi%20tu%20media%20kit%20y%20me%20interesa%20el%20Reel%20org%C3%A1nico%20%28%2480%29." target="_blank" rel="noopener" class="btn wab"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"></path></svg>Lo quiero</a>
+</article>
+<article class="lift rv d1" data-rv="s2" style="background: #FFFFFF; border: 1px solid rgba(191,104,117,0.18); border-radius: 28px; padding: clamp(24px, 5vw, 34px); display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
+<h3 class="serif" style="margin: 0; font-size: clamp(28px, 4vw, 34px); line-height: 1.05; color: #A9546A">Mención en historias</h3>
+<span style="display: flex; align-items: baseline; gap: 4px"><span class="num" style="font-size: clamp(34px, 5vw, 40px); font-weight: 600; letter-spacing: -0.03em; color: #7E3346; line-height: 1">$10</span><span style="font-size: 13px; color: #8C4255">c/u</span></span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #5B3940; font-weight: 300">Mención suelta en historias: una forma ágil de llevar tu marca a la comunidad.</p>
+<div class="stag" style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto">
+<span class="rv-pop" data-rv="chips" style="font-size: 12px; padding: 7px 12px; border-radius: 999px; background: #F8ECEE; color: #8C4255">Rápida activación</span>
+<span class="rv-pop" data-rv="chips" style="font-size: 12px; padding: 7px 12px; border-radius: 999px; background: #F8ECEE; color: #8C4255">Por unidad</span>
+</div>
+<a href="https://wa.me/584245625223?text=Hola%20Daniela%2C%20vi%20tu%20media%20kit%20y%20me%20interesan%20las%20menciones%20en%20historias%20%28%2410%20c%2Fu%29." target="_blank" rel="noopener" class="btn wab"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"></path></svg>Lo quiero</a>
+</article>
+</div>
+</div>
+
+<div class="sgrp sg2">
+<article class="rv" data-rv="sModel" style="background: #F8ECEE; border-radius: 30px; padding: clamp(24px, 5vw, 40px); display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px">
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<h3 class="serif" style="margin: 0; font-size: clamp(32px, 4.5vw, 40px); line-height: 1.05; color: #A9546A">Modelo e imagen comercial</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #5B3940; font-weight: 300; max-width: 560px">Participación como modelo para fotografía o video cuando el cliente o agencia ya cuenta con su propio equipo de producción y edición.</p>
+</div>
+<p style="flex: 0 1 320px; margin: 0; font-size: 13px; line-height: 1.6; color: #6B3A45; align-self: flex-end">¿Sin equipo? Puedo incluir al equipo de la agencia con un costo adicional.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(190px, 100%), 1fr)); gap: 12px">
+<div class="lift rv-pop d1" data-rv="sm1" style="background: #FFFFFF; border-radius: 22px; padding: 22px 24px; display: flex; flex-direction: column; gap: 6px">
+<span class="num" style="font-size: 42px; font-weight: 600; letter-spacing: -0.03em; color: #7E3346; line-height: 1">$40</span>
+<span style="font-size: 14px; color: #5B3940">1 video</span>
+</div>
+<div class="lift rv-pop d2" data-rv="sm2" style="background: #FFFFFF; border-radius: 22px; padding: 22px 24px; display: flex; flex-direction: column; gap: 6px">
+<span class="num" style="font-size: 42px; font-weight: 600; letter-spacing: -0.03em; color: #7E3346; line-height: 1">$90</span>
+<span style="font-size: 14px; color: #5B3940">Paquete de 3 videos</span>
+<span style="font-size: 12px; color: #8C4255">$30 por video</span>
+</div>
+<div class="lift rv-pop d3" data-rv="sm3" style="background: #A9546A; color: #FFFFFF; border-radius: 22px; padding: 22px 24px; display: flex; flex-direction: column; gap: 6px; position: relative">
+<span style="position: absolute; top: 16px; right: 16px; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; background: rgba(255,255,255,0.18)">Más elegido</span>
+<span class="num" style="font-size: 42px; font-weight: 600; letter-spacing: -0.03em; line-height: 1">$125</span>
+<span style="font-size: 14px; color: #FFF4F6">Paquete de 5 videos</span>
+<span style="font-size: 12px; color: #FFF4F6">$25 por video</span>
+<ul style="margin: 12px 0 0; padding: 12px 0 0; border-top: 1px solid rgba(255,255,255,0.25); list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 13px; line-height: 1.5; color: #FFFFFF">
+<li style="display: flex; gap: 8px; align-items: flex-start"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 2px"><path d="M5 12l5 5L20 7"></path></svg><span>Grabación en hasta 2 visitas</span></li>
+<li style="display: flex; gap: 8px; align-items: flex-start"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 2px"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg><span>Opción de colab en 1 video: <strong style="font-weight: 600">+$55</strong>*</span></li>
+</ul>
+</div>
+</div>
+<p class="rv-l" data-rv="modL" style="margin: 0; font-size: 13px; line-height: 1.6; color: #6B3A45">*Colab: el video aparece en tu feed y en el mío. Permanece publicado 60 días y debe ir acorde al contenido de mi cuenta.</p>
+<a href="https://wa.me/584245625223?text=Hola%20Daniela%2C%20vi%20tu%20media%20kit%20y%20me%20interesa%20contratarte%20como%20modelo.%20%C2%BFQu%C3%A9%20paquete%20me%20recomiendas%3F" target="_blank" rel="noopener" class="btn wab"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"></path></svg>Quiero cotizar</a>
+</article>
+</div>
+
+<div class="sgrp sg3">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 16px">
+<article class="lift rv" data-rv="sEmb" style="background: #FFFFFF; border: 1px solid rgba(191,104,117,0.18); border-radius: 28px; padding: clamp(24px, 5vw, 36px); display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #8C4255">Mensual</span>
+<h3 class="serif" style="margin: 0; font-size: clamp(30px, 4vw, 36px); line-height: 1.05; color: #A9546A">Embajadora de marca</h3>
+</div>
+<span style="display: flex; flex-direction: column; align-items: flex-end"><span class="num" style="font-size: clamp(36px, 5vw, 44px); font-weight: 600; letter-spacing: -0.03em; color: #7E3346; line-height: 1">$300</span><span style="font-size: 13px; color: #8C4255">/ mes</span></span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #5B3940; font-weight: 300">Uso de imagen como embajadora oficial por 1 mes.</p>
+<ul class="stag" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 14px; color: #4B2E35">
+<li class="rv-l" data-rv="embL" style="display: flex; gap: 10px; align-items: flex-start"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A9546A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M5 12l5 5L20 7"></path></svg>2 visitas al mes (hasta 5 h c/u)</li>
+<li class="rv-l" data-rv="embL" style="display: flex; gap: 10px; align-items: flex-start"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A9546A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M5 12l5 5L20 7"></path></svg>Creación de contenido</li>
+<li class="rv-l" data-rv="embL" style="display: flex; gap: 10px; align-items: flex-start"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A9546A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M5 12l5 5L20 7"></path></svg>Menciones en historias</li>
+<li class="rv-l" data-rv="embL" style="display: flex; gap: 10px; align-items: flex-start"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A9546A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M5 12l5 5L20 7"></path></svg>Recomendación orgánica a la comunidad</li>
+<li class="rv-l" data-rv="embL" style="display: flex; gap: 10px; align-items: flex-start"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A9546A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M5 12l5 5L20 7"></path></svg>Exclusividad de rubro</li>
+<li class="rv-l" data-rv="embL" style="display: flex; gap: 10px; align-items: flex-start"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A9546A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M5 12l5 5L20 7"></path></svg>Opción de un video en colab (aparece en tu feed y en el mío)</li>
+</ul>
+<a href="https://wa.me/584245625223?text=Hola%20Daniela%2C%20vi%20tu%20media%20kit%20y%20me%20interesa%20el%20plan%20de%20Embajadora%20de%20marca%20%28%24300%2Fmes%29." target="_blank" rel="noopener" class="btn wab"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"></path></svg>Lo quiero</a>
+</article>
+<article class="lift rv d1" data-rv="sAli" style="position: relative; background: linear-gradient(160deg, #A9546A 0%, #8C4255 100%); color: #FFFFFF; border-radius: 28px; padding: clamp(24px, 5vw, 36px); display: flex; flex-direction: column; gap: 18px; overflow: hidden">
+<div aria-hidden="true" style="position: absolute; right: -80px; bottom: -80px; width: 260px; height: 260px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.22)"></div>
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="align-self: flex-start; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; background: rgba(255,255,255,0.18)">Ahorras $400</span>
+<h3 class="serif" style="margin: 0; font-size: clamp(30px, 4vw, 36px); line-height: 1.05">Alianza de 3 meses</h3>
+</div>
+<span style="display: flex; flex-direction: column; align-items: flex-end"><span class="num" style="font-size: clamp(36px, 5vw, 44px); font-weight: 600; letter-spacing: -0.03em; line-height: 1">$500</span><span style="font-size: 13px; color: #FFF4F6">total</span></span>
+</div>
+<div style="position: relative; display: flex; gap: 12px; align-items: flex-start; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.28); border-radius: 18px; padding: 14px 16px">
+<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><rect x="3" y="6" width="18" height="13" rx="2.5"></rect><path d="M3 10.5h18"></path><path d="M7 15h3"></path></svg>
+<span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 15px; font-weight: 600">Sin pagar todo de una vez</strong><span style="font-size: 13px; line-height: 1.55; color: #FFF4F6">Divide el pago en cuotas mensuales o quincenales, como mejor nos convenga a ambas partes. Equivale a menos de $170 al mes.</span></span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #FFF4F6; font-weight: 300">Todos los beneficios del plan de embajadora, con presencia continua y exclusividad total frente a la competencia durante 3 meses.</p>
+<ul class="stag" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 14px">
+<li class="rv-l" data-rv="aliL" style="display: flex; gap: 10px; align-items: flex-start"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M5 12l5 5L20 7"></path></svg>Todo lo del plan mensual</li>
+<li class="rv-l" data-rv="aliL" style="display: flex; gap: 10px; align-items: flex-start"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M5 12l5 5L20 7"></path></svg>Presencia continua por 3 meses</li>
+<li class="rv-l" data-rv="aliL" style="display: flex; gap: 10px; align-items: flex-start"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M5 12l5 5L20 7"></path></svg>Exclusividad total frente a la competencia</li></ul>
+<a href="https://wa.me/584245625223?text=Hola%20Daniela%2C%20vi%20tu%20media%20kit%20y%20me%20interesa%20la%20Alianza%20de%203%20meses%20%28%24500%29." target="_blank" rel="noopener" class="btn wab wab-l"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"></path></svg>Quiero esta alianza</a>
+</article>
+</div>
+</div>
+
+<div class="sgrp sg4">
+<article class="rv" data-rv="sProm" style="background: #FFFFFF; border: 1px solid rgba(191,104,117,0.18); border-radius: 28px; padding: clamp(24px, 5vw, 36px); display: flex; flex-wrap: wrap; gap: 22px; align-items: center">
+<div style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #8C4255">Eventos y activaciones</span>
+<h3 class="serif" style="margin: 0; font-size: clamp(30px, 4vw, 36px); line-height: 1.05; color: #A9546A">Promotora / Impulsadora</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #5B3940; font-weight: 300">Tarifa según el calzado, el lugar y el horario de la jornada.</p>
+</div>
+<div style="flex: 0 1 auto; display: flex; flex-direction: column; align-items: flex-start; gap: 2px">
+<span class="num" style="font-size: clamp(36px, 5vw, 44px); font-weight: 600; letter-spacing: -0.03em; color: #7E3346; line-height: 1">$12–15</span>
+<span style="font-size: 13px; color: #8C4255">por hora</span>
+</div>
+<div class="stag" style="flex: 1 1 100%; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 12px; padding-top: 20px; border-top: 1px solid rgba(191,104,117,0.18)">
+<div class="rv-l" data-rv="promL" style="display: flex; gap: 12px; align-items: flex-start; font-size: 14px; line-height: 1.6; color: #5B3940"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A9546A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 2px"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><span><strong style="font-weight: 600; color: #4B2E35">Mínimo 3 horas</strong> de contratación.</span></div>
+<div class="rv-l" data-rv="promL" style="display: flex; gap: 12px; align-items: flex-start; font-size: 14px; line-height: 1.6; color: #5B3940"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A9546A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 2px"><path d="M4 11h16"></path><path d="M6 11a6 6 0 0 1 12 0"></path><path d="M5 15h14"></path></svg><span>Jornadas de más de 5 horas o en horario de comida incluyen <strong style="font-weight: 600; color: #4B2E35">almuerzo o cena</strong> a cargo del cliente.</span></div>
+</div>
+<a href="https://wa.me/584245625223?text=Hola%20Daniela%2C%20vi%20tu%20media%20kit%20y%20me%20interesa%20contratarte%20como%20promotora%20para%20un%20evento." target="_blank" rel="noopener" class="btn wab"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"></path></svg>Consultar fecha</a>
+</article>
+</div>
+</div>
+
+<p class="snote rv" data-rv="sNote" style="margin: 0; display: flex; align-items: center; justify-content: center; gap: 8px; text-align: center; font-size: 13px; line-height: 1.6; color: #6B3A45"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A9546A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 8h.01"></path></svg><span>Precios en dólares (USD). Pago en bolívares a tasa BCV del día.</span></p>
 </div>
 </section>
 
 <!-- SOBRE MI -->
-<section id="sobre-mi" style="padding: clamp(56px, 8vw, 90px) 20px clamp(72px, 10vw, 120px)">
+<section id="sobre-mi" style="background: linear-gradient(180deg, #FBF7F6 0%, #F3E0E3 100%); padding: clamp(56px, 8vw, 90px) 20px clamp(72px, 10vw, 120px)">
 <div style="max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap-reverse; align-items: center; gap: clamp(40px, 6vw, 64px)">
 
 <!-- tarjeta de perfil -->
@@ -399,316 +706,6 @@ Ver perfil en Instagram
 </div>
 </div>
 </div>
-</div>
-</section>
-
-<!-- AUDIENCIA -->
-<section id="audiencia" style="position: relative; background: linear-gradient(180deg, #EBCDD2 0%, #E5BEC6 100%); padding: clamp(72px, 10vw, 120px) 20px; overflow: hidden">
-<div aria-hidden="true" style="position: absolute; right: -120px; top: -120px; width: 420px; height: 420px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.55)"></div>
-<div aria-hidden="true" style="position: absolute; left: -160px; bottom: -180px; width: 520px; height: 520px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.45)"></div>
-<div style="position: relative; max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: clamp(32px, 5vw, 48px)">
-<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px">
-<div style="display: flex; flex-direction: column; gap: 14px">
-<p class="rv" data-rv="audEy" style="margin: 0; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #7E3346; font-weight: 500">Audiencia</p>
-<h2 class="serif mask" data-rv="audTitle" style="margin: 0; font-size: clamp(40px, 5.5vw, 76px); line-height: 1; color: #7E3346"><span class="ln d1">Una comunidad que mira, siente y responde.</span></h2>
-</div>
-<p class="rv d2" data-rv="audNote" style="margin: 0; font-size: 13px; color: #6B3A45; max-width: 300px; line-height: 1.6">Datos de Instagram @amarodaniela_ · últimos 90 días</p>
-</div>
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 16px">
-<div class="lift rv statcard" data-rv="aud1" style="background: #A9546A; color: #FFFFFF; border-radius: 28px; padding: clamp(24px, 5vw, 34px); display: flex; flex-direction: column; justify-content: space-between; gap: 24px; min-height: 220px">
-<span style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #FFF4F6">Seguidores</span>
-<div style="display: flex; flex-direction: column; gap: 8px">
-<span class="num" style="font-size: clamp(60px, 7vw, 96px); font-weight: 600; letter-spacing: -0.04em; line-height: 0.9">+<span class="cnt" data-to="16.5" data-dec="1" data-sfx="K" data-comma="0">16.5K</span></span>
-<span style="font-size: 14px; color: #FFF4F6; line-height: 1.5">Comunidad orgánica en Instagram</span>
-</div>
-</div>
-<div class="lift rv d1 statcard" data-rv="aud2" style="background: rgba(255,255,255,0.75); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 28px; padding: clamp(24px, 5vw, 34px); display: flex; flex-direction: column; justify-content: space-between; gap: 24px; min-height: 220px">
-<span style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #8C4255">Visualizaciones</span>
-<div style="display: flex; flex-direction: column; gap: 8px">
-<span class="num" style="font-size: clamp(60px, 7vw, 96px); font-weight: 600; letter-spacing: -0.04em; line-height: 0.9; color: #7E3346"><span class="cnt" data-to="167" data-dec="0" data-sfx="K" data-comma="0">167K</span></span>
-<span style="font-size: 14px; color: #6B3A45; line-height: 1.5">Alcance <strong class="num" style="font-weight: 600"><span class="cnt" data-to="10" data-dec="0" data-sfx="" data-comma="0">10</span>×</strong> mayor que su comunidad</span>
-</div>
-</div>
-<div class="lift rv d2 statcard" data-rv="aud3" style="background: rgba(255,255,255,0.75); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 28px; padding: clamp(24px, 5vw, 34px); display: flex; flex-direction: column; justify-content: space-between; gap: 24px; min-height: 220px">
-<span style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #8C4255">Interacciones</span>
-<div style="display: flex; flex-direction: column; gap: 8px">
-<span class="num" style="font-size: clamp(60px, 7vw, 96px); font-weight: 600; letter-spacing: -0.04em; line-height: 0.9; color: #7E3346"><span class="cnt" data-to="8.4" data-dec="1" data-sfx="K" data-comma="0">8.4K</span></span>
-<span style="font-size: 14px; color: #6B3A45; line-height: 1.5">Likes, comentarios, guardados y compartidos</span>
-</div>
-</div>
-</div>
-
-<div class="lift rv center-sm" data-rv="audSplit" data-progress style="background: #FFFFFF; border-radius: 28px; padding: clamp(24px, 5vw, 36px); display: flex; flex-wrap: wrap; align-items: center; gap: clamp(24px, 4vw, 40px)">
-<div style="flex: 0 0 auto; position: relative; width: 180px; height: 180px; border-radius: 50%; background: conic-gradient(#A9546A 0deg calc(317.52deg * var(--p, 1)), #F3DDE1 calc(317.52deg * var(--p, 1)) 360deg)">
-<div style="position: absolute; inset: 20px; border-radius: 50%; background: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px">
-<span class="num" style="font-size: 36px; font-weight: 600; letter-spacing: -0.03em; color: #7E3346"><span class="cnt" data-to="88.2" data-dec="1" data-sfx="%" data-comma="1">88,2%</span></span>
-<span style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #8C4255">Mujeres</span>
-</div>
-</div>
-<div style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 20px; text-align: left">
-<div style="display: flex; flex-direction: column; gap: 6px">
-<h3 class="serif" style="margin: 0; font-size: clamp(30px, 4vw, 36px); color: #A9546A; line-height: 1.05">Perfil de la audiencia</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #5B3940; font-weight: 300">Una comunidad mayoritariamente femenina: ideal para marcas de moda, belleza, bienestar y estilo de vida.</p>
-</div>
-<div style="display: flex; flex-direction: column; gap: 8px">
-<div style="display: flex; justify-content: space-between; font-size: 14px"><span style="font-weight: 500">Femenina</span><span class="num" style="font-weight: 600; color: #7E3346"><span class="cnt" data-to="88.2" data-dec="1" data-sfx="%" data-comma="1">88,2%</span></span></div>
-<div style="height: 10px; border-radius: 999px; background: #F3DDE1; overflow: hidden"><div style="height: 100%; width: calc(88.2% * var(--p, 1)); border-radius: 999px; background: linear-gradient(90deg, #C77788, #A9546A)"></div></div>
-</div>
-<div style="display: flex; flex-direction: column; gap: 8px">
-<div style="display: flex; justify-content: space-between; font-size: 14px"><span style="font-weight: 500">Masculina</span><span class="num" style="font-weight: 600; color: #7E3346"><span class="cnt" data-to="11.8" data-dec="1" data-sfx="%" data-comma="1">11,8%</span></span></div>
-<div style="height: 10px; border-radius: 999px; background: #F3DDE1; overflow: hidden"><div style="height: 100%; width: calc(11.8% * var(--p, 1)); border-radius: 999px; background: linear-gradient(90deg, #DDA3AF, #C77788)"></div></div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- REELS -->
-<section id="reels" aria-label="Contenido reciente" style="padding: clamp(72px, 10vw, 120px) 20px 0">
-<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px">
-<p class="rv" data-rv="rEy" style="margin: 0; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #8C4255; font-weight: 500">Contenido reciente</p>
-<h2 class="serif mask" data-rv="rTitle" style="margin: 0; font-size: clamp(42px, 5vw, 68px); line-height: 1; color: #A9546A"><span class="ln d1">Así cuento historias</span></h2>
-<p class="rv d2" data-rv="rSub" style="margin: 0; font-size: 16px; line-height: 1.7; color: #5B3940; max-width: 520px; font-weight: 300">Algunas colaboraciones recientes con marcas: guion propio, estética cuidada y una comunidad que responde.</p>
-<div class="stag snap" style="width: 100%; max-width: 980px; margin-top: 26px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; text-align: left">
-<a href="https://www.instagram.com/p/Dd2GrdCzD_O/" target="_blank" rel="noopener" aria-label="Ver el reel con Casa Condimentos en Instagram" class="reel lift rv-pop" data-rv="reels" style="position: relative; display: block; aspect-ratio: 9 / 16; border-radius: 26px; overflow: hidden; background: #D995A3; color: #FFFFFF; text-decoration: none; box-shadow: 0 30px 60px -40px rgba(120,52,68,0.6)">
-<video src="assets/reel-casa-condimentos.b2ef0b3a.mp4" poster="assets/reel-casa-condimentos.163f4b5d.webp" muted loop playsinline preload="metadata" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></video>
-<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(60,22,32,0.35) 0%, rgba(60,22,32,0) 26%, rgba(60,22,32,0) 55%, rgba(60,22,32,0.78) 100%)"></span>
-<span style="position: absolute; top: 14px; left: 14px; font-size: 11px; letter-spacing: 0.06em; padding: 6px 11px; border-radius: 999px; background: rgba(255,255,255,0.22); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px)">@casa_condimentos28</span>
-<span style="position: absolute; left: 16px; right: 16px; bottom: 16px; display: flex; align-items: flex-end; justify-content: space-between; gap: 10px">
-<span style="display: flex; flex-direction: column; gap: 3px"><span style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #FFF4F6">Reel 01 · Alimentos</span><span class="serif" style="font-size: 24px; line-height: 1.05">Casa Condimentos</span></span>
-<span style="flex: none; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.22); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
-</span>
-</a>
-<a href="https://www.instagram.com/p/DcMsLsvhk-e/" target="_blank" rel="noopener" aria-label="Ver el reel con NOW en Instagram" class="reel lift rv-pop" data-rv="reels" style="position: relative; display: block; aspect-ratio: 9 / 16; border-radius: 26px; overflow: hidden; background: #C97E8F; color: #FFFFFF; text-decoration: none; box-shadow: 0 30px 60px -40px rgba(120,52,68,0.6)">
-<video src="assets/reel-now.ff3bad1c.mp4" poster="assets/reel-now.36637d4c.webp" muted loop playsinline preload="metadata" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></video>
-<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(60,22,32,0.35) 0%, rgba(60,22,32,0) 26%, rgba(60,22,32,0) 55%, rgba(60,22,32,0.78) 100%)"></span>
-<span style="position: absolute; top: 14px; left: 14px; font-size: 11px; letter-spacing: 0.06em; padding: 6px 11px; border-radius: 999px; background: rgba(255,255,255,0.22); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px)">@nowappve</span>
-<span style="position: absolute; left: 16px; right: 16px; bottom: 16px; display: flex; align-items: flex-end; justify-content: space-between; gap: 10px">
-<span style="display: flex; flex-direction: column; gap: 3px"><span style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #FFF4F6">Reel 02 · Movilidad</span><span class="serif" style="font-size: 24px; line-height: 1.05">NOW</span></span>
-<span style="flex: none; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.22); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
-</span>
-</a>
-<a href="https://www.instagram.com/p/DadQ-z5xkLG/" target="_blank" rel="noopener" aria-label="Ver el reel con Motores VMJ en Instagram" class="reel lift rv-pop" data-rv="reels" style="position: relative; display: block; aspect-ratio: 9 / 16; border-radius: 26px; overflow: hidden; background: #A9546A; color: #FFFFFF; text-decoration: none; box-shadow: 0 30px 60px -40px rgba(120,52,68,0.6)">
-<video src="assets/reel-motores-vmj.b1ff5500.mp4" poster="assets/reel-motores-vmj.7010f82d.webp" muted loop playsinline preload="metadata" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></video>
-<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(60,22,32,0.35) 0%, rgba(60,22,32,0) 26%, rgba(60,22,32,0) 55%, rgba(60,22,32,0.78) 100%)"></span>
-<span style="position: absolute; top: 14px; left: 14px; font-size: 11px; letter-spacing: 0.06em; padding: 6px 11px; border-radius: 999px; background: rgba(255,255,255,0.22); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px)">@motoresvmjla42</span>
-<span style="position: absolute; left: 16px; right: 16px; bottom: 16px; display: flex; align-items: flex-end; justify-content: space-between; gap: 10px">
-<span style="display: flex; flex-direction: column; gap: 3px"><span style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #FFF4F6">Reel 03 · Automotriz</span><span class="serif" style="font-size: 24px; line-height: 1.05">Motores VMJ</span></span>
-<span style="flex: none; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.22); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
-</span>
-</a>
-<a href="https://www.instagram.com/p/DYDf2sMobbS/" target="_blank" rel="noopener" aria-label="Ver el reel con Tiendas Montana en Instagram" class="reel lift rv-pop" data-rv="reels" style="position: relative; display: block; aspect-ratio: 9 / 16; border-radius: 26px; overflow: hidden; background: #B96A7D; color: #FFFFFF; text-decoration: none; box-shadow: 0 30px 60px -40px rgba(120,52,68,0.6)">
-<video src="assets/reel-tiendas-montana.63936bfc.mp4" poster="assets/reel-tiendas-montana.d5e63fe7.webp" muted loop playsinline preload="metadata" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></video>
-<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(60,22,32,0.35) 0%, rgba(60,22,32,0) 26%, rgba(60,22,32,0) 55%, rgba(60,22,32,0.78) 100%)"></span>
-<span style="position: absolute; top: 14px; left: 14px; font-size: 11px; letter-spacing: 0.06em; padding: 6px 11px; border-radius: 999px; background: rgba(255,255,255,0.22); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px)">@tiendasmontanalancolor</span>
-<span style="position: absolute; left: 16px; right: 16px; bottom: 16px; display: flex; align-items: flex-end; justify-content: space-between; gap: 10px">
-<span style="display: flex; flex-direction: column; gap: 3px"><span style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #FFF4F6">Reel 04 · Hogar</span><span class="serif" style="font-size: 24px; line-height: 1.05">Tiendas Montana</span></span>
-<span style="flex: none; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.22); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
-</span>
-</a>
-<a href="https://www.instagram.com/p/DWpTJYoJXmr/" target="_blank" rel="noopener" aria-label="Ver el reel con Sazonova en Instagram" class="reel lift rv-pop" data-rv="reels" style="position: relative; display: block; aspect-ratio: 9 / 16; border-radius: 26px; overflow: hidden; background: #D995A3; color: #FFFFFF; text-decoration: none; box-shadow: 0 30px 60px -40px rgba(120,52,68,0.6)">
-<video src="assets/reel-sazonova.b72207e0.mp4" poster="assets/reel-sazonova.6b2e199e.webp" muted loop playsinline preload="metadata" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></video>
-<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(60,22,32,0.35) 0%, rgba(60,22,32,0) 26%, rgba(60,22,32,0) 55%, rgba(60,22,32,0.78) 100%)"></span>
-<span style="position: absolute; top: 14px; left: 14px; font-size: 11px; letter-spacing: 0.06em; padding: 6px 11px; border-radius: 999px; background: rgba(255,255,255,0.22); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px)">@sazonovave</span>
-<span style="position: absolute; left: 16px; right: 16px; bottom: 16px; display: flex; align-items: flex-end; justify-content: space-between; gap: 10px">
-<span style="display: flex; flex-direction: column; gap: 3px"><span style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #FFF4F6">Reel 05 · Alimentos</span><span class="serif" style="font-size: 24px; line-height: 1.05">Sazonova</span></span>
-<span style="flex: none; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.22); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
-</span>
-</a>
-<a href="https://www.instagram.com/p/DUZPELSiGoy/" target="_blank" rel="noopener" aria-label="Ver el reel con Remesas JJ en Instagram" class="reel lift rv-pop" data-rv="reels" style="position: relative; display: block; aspect-ratio: 9 / 16; border-radius: 26px; overflow: hidden; background: #C97E8F; color: #FFFFFF; text-decoration: none; box-shadow: 0 30px 60px -40px rgba(120,52,68,0.6)">
-<video src="assets/reel-remesas-jj.24d0aa0a.mp4" poster="assets/reel-remesas-jj.cd72d72c.webp" muted loop playsinline preload="metadata" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></video>
-<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(60,22,32,0.35) 0%, rgba(60,22,32,0) 26%, rgba(60,22,32,0) 55%, rgba(60,22,32,0.78) 100%)"></span>
-<span style="position: absolute; top: 14px; left: 14px; font-size: 11px; letter-spacing: 0.06em; padding: 6px 11px; border-radius: 999px; background: rgba(255,255,255,0.22); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px)">@remesasjj_</span>
-<span style="position: absolute; left: 16px; right: 16px; bottom: 16px; display: flex; align-items: flex-end; justify-content: space-between; gap: 10px">
-<span style="display: flex; flex-direction: column; gap: 3px"><span style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #FFF4F6">Reel 06 · Envíos</span><span class="serif" style="font-size: 24px; line-height: 1.05">Remesas JJ</span></span>
-<span style="flex: none; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.22); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
-</span>
-</a>
-</div>
-<p class="show-sm" style="margin: 0; justify-content: center; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #8C4255">Desliza <span class="nudge" aria-hidden="true" style="margin-left: 6px">→</span></p>
-<a href="https://instagram.com/amarodaniela_" target="_blank" rel="noopener" class="btn rv d2" data-rv="rBtn" style="margin-top: 10px; display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 24px; border-radius: 999px; background: #F3DDE1; color: #8C4255; text-decoration: none; font-size: 14px; font-weight: 600">Ver más en Instagram</a>
-</div>
-</section>
-
-<!-- MARCAS -->
-<section id="marcas" aria-label="Marcas" style="padding: clamp(72px, 10vw, 120px) 20px 0">
-<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px">
-<p class="rv" data-rv="bEy" style="margin: 0; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #8C4255; font-weight: 500">Marcas</p>
-<h2 class="serif mask" data-rv="bTitle" style="margin: 0; font-size: clamp(42px, 5vw, 68px); line-height: 1; color: #A9546A"><span class="ln d1">Han confiado en mí</span></h2>
-<p class="rv d2" data-rv="bSub" style="margin: 0; font-size: 16px; line-height: 1.7; color: #5B3940; max-width: 520px; font-weight: 300">Marcas de salud, belleza, alimentos y hogar que ya han trabajado conmigo.</p>
-<div class="lstrip rv" data-rv="bLogos" style="width: 100vw; margin: 24px calc(50% - 50vw) 0; overflow: hidden">
-<div class="marquee lmq" style="display: flex; width: max-content; padding: 4px 0">
-<div style="display: flex; gap: 14px; padding-right: 14px"><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-farmatodo.fb000612.svg" alt="Farmatodo" style="max-width: 100%; max-height: 54px; width: auto; height: auto; display: block" width="389" height="471" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-farmaclinica-verde.2fe7ef4a.svg" alt="Farmaclínica Verde" style="max-width: 100%; max-height: 43px; width: auto; height: auto; display: block" width="1275" height="324" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-natys.bcaaedf5.svg" alt="Naty's" style="max-width: 100%; max-height: 49px; width: auto; height: auto; display: block" width="634" height="368" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-sazonova.76085c29.svg" alt="Sazonova" style="max-width: 100%; max-height: 46px; width: auto; height: auto; display: block" width="790" height="259" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-hammer.2d108511.svg" alt="Hammer" style="max-width: 100%; max-height: 49px; width: auto; height: auto; display: block" width="620" height="329" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-cachapas-del-este.ae007d26.svg" alt="Cachapas del Este" style="max-width: 100%; max-height: 62px; width: auto; height: auto; display: block" width="703" height="674" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-rucha.133d2c99.svg" alt="Rucha" style="max-width: 100%; max-height: 39px; width: auto; height: auto; display: block" width="738" height="240" loading="lazy" decoding="async"></div></div>
-<div aria-hidden="true" style="display: flex; gap: 14px; padding-right: 14px"><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-farmatodo.fb000612.svg" alt="" style="max-width: 100%; max-height: 54px; width: auto; height: auto; display: block" width="389" height="471" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-farmaclinica-verde.2fe7ef4a.svg" alt="" style="max-width: 100%; max-height: 43px; width: auto; height: auto; display: block" width="1275" height="324" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-natys.bcaaedf5.svg" alt="" style="max-width: 100%; max-height: 49px; width: auto; height: auto; display: block" width="634" height="368" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-sazonova.76085c29.svg" alt="" style="max-width: 100%; max-height: 46px; width: auto; height: auto; display: block" width="790" height="259" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-hammer.2d108511.svg" alt="" style="max-width: 100%; max-height: 49px; width: auto; height: auto; display: block" width="620" height="329" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-cachapas-del-este.ae007d26.svg" alt="" style="max-width: 100%; max-height: 62px; width: auto; height: auto; display: block" width="703" height="674" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-rucha.133d2c99.svg" alt="" style="max-width: 100%; max-height: 39px; width: auto; height: auto; display: block" width="738" height="240" loading="lazy" decoding="async"></div></div>
-<div aria-hidden="true" style="display: flex; gap: 14px; padding-right: 14px"><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-farmatodo.fb000612.svg" alt="" style="max-width: 100%; max-height: 54px; width: auto; height: auto; display: block" width="389" height="471" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-farmaclinica-verde.2fe7ef4a.svg" alt="" style="max-width: 100%; max-height: 43px; width: auto; height: auto; display: block" width="1275" height="324" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-natys.bcaaedf5.svg" alt="" style="max-width: 100%; max-height: 49px; width: auto; height: auto; display: block" width="634" height="368" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-sazonova.76085c29.svg" alt="" style="max-width: 100%; max-height: 46px; width: auto; height: auto; display: block" width="790" height="259" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-hammer.2d108511.svg" alt="" style="max-width: 100%; max-height: 49px; width: auto; height: auto; display: block" width="620" height="329" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-cachapas-del-este.ae007d26.svg" alt="" style="max-width: 100%; max-height: 62px; width: auto; height: auto; display: block" width="703" height="674" loading="lazy" decoding="async"></div><div class="ltile" style="flex: none; width: 168px; height: 92px; border-radius: 20px; border: 1px solid rgba(191,104,117,0.16); background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 16px 20px"><img src="assets/logo-rucha.133d2c99.svg" alt="" style="max-width: 100%; max-height: 39px; width: auto; height: auto; display: block" width="738" height="240" loading="lazy" decoding="async"></div></div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- SERVICIOS -->
-<section id="servicios" style="padding: clamp(72px, 10vw, 130px) 20px clamp(64px, 9vw, 110px)">
-<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: clamp(28px, 4vw, 44px)">
-<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px">
-<p class="rv" data-rv="sEy" style="margin: 0; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #8C4255; font-weight: 500">Servicios</p>
-<h2 class="serif mask" data-rv="sTitle" style="margin: 0; font-size: clamp(44px, 6vw, 84px); line-height: 1; color: #A9546A"><span class="ln d1">Hagamos crecer tu marca</span></h2>
-<p class="rv d2" data-rv="sSub" style="margin: 0; font-size: 16px; line-height: 1.7; color: #5B3940; max-width: 560px; font-weight: 300">Desde una mención puntual hasta una alianza de largo plazo. Elige el formato que mejor encaja con tu marca.</p>
-</div>
-
-<article class="sinc rv" data-rv="inc" style="position: relative; overflow: hidden; background: linear-gradient(150deg, #FFFFFF 0%, #F8ECEE 100%); border: 1px solid rgba(191,104,117,0.18); border-radius: 30px; padding: clamp(26px, 5vw, 44px); display: flex; flex-direction: column; gap: clamp(22px, 3vw, 30px)">
-<div aria-hidden="true" style="position: absolute; right: -90px; top: -90px; width: 280px; height: 280px; border-radius: 50%; border: 1px solid rgba(169,84,106,0.16)"></div>
-<div style="position: relative; display: flex; flex-direction: column; gap: 10px; max-width: 640px">
-<span style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #8C4255">Incluido en todos mis servicios</span>
-<h3 class="serif" style="margin: 0; font-size: clamp(32px, 4.5vw, 46px); line-height: 1.02; color: #A9546A">Más que grabar: pienso tu contenido contigo</h3>
-</div>
-<div class="stag" style="position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 14px">
-<div class="rv-pop" data-rv="incI" style="background: rgba(255,255,255,0.85); border-radius: 22px; padding: 22px; display: flex; flex-direction: column; gap: 10px">
-<span style="width: 44px; height: 44px; border-radius: 50%; background: #F3DDE1; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A9546A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"></path><path d="M10 21h4"></path><path d="M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"></path></svg></span>
-<span class="serif" style="font-size: 23px; line-height: 1.1; color: #A9546A">Asesoría creativa personalizada</span>
-<span style="font-size: 14px; line-height: 1.6; color: #5B3940">Te oriento sobre tendencias y el tipo de contenido que mejor le funciona a tu marca.</span>
-</div>
-<div class="rv-pop" data-rv="incI" style="background: rgba(255,255,255,0.85); border-radius: 22px; padding: 22px; display: flex; flex-direction: column; gap: 10px">
-<span style="width: 44px; height: 44px; border-radius: 50%; background: #F3DDE1; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A9546A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9l-4-4L4 16v4z"></path><path d="M13 7l4 4"></path></svg></span>
-<span class="serif" style="font-size: 23px; line-height: 1.1; color: #A9546A">Ideas y guiones propios</span>
-<span style="font-size: 14px; line-height: 1.6; color: #5B3940">Propongo ideas y escribo el guion, con la naturalidad que conecta con tu audiencia.</span>
-</div></div>
-</article>
-
-<div class="sbody" style="display: flex; flex-direction: column; gap: clamp(28px, 4vw, 44px)">
-<div class="stabs" role="group" aria-label="Tipo de servicio">
-<input type="radio" name="svt" id="svt1" class="svt"><label for="svt1">Contenido</label>
-<input type="radio" name="svt" id="svt2" class="svt"><label for="svt2">Modelo</label>
-<input type="radio" name="svt" id="svt3" class="svt"><label for="svt3">Alianzas</label>
-<input type="radio" name="svt" id="svt4" class="svt"><label for="svt4">Eventos</label>
-</div>
-
-<div class="sgrp sg1">
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 16px">
-<article class="lift rv" data-rv="s1" style="background: #FFFFFF; border: 1px solid rgba(191,104,117,0.18); border-radius: 28px; padding: clamp(24px, 5vw, 34px); display: flex; flex-direction: column; gap: 16px">
-<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
-<h3 class="serif" style="margin: 0; font-size: clamp(28px, 4vw, 34px); line-height: 1.05; color: #A9546A">Reel orgánico</h3>
-<span class="num" style="font-size: clamp(34px, 5vw, 40px); font-weight: 600; letter-spacing: -0.03em; color: #7E3346; line-height: 1">$80</span>
-</div>
-<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #5B3940; font-weight: 300">Guion personalizado, edición y publicación en mi perfil, más menciones en historias. Con opción de publicarlo en colaboración, para que aparezca en tu feed y en el mío.</p>
-<div class="stag" style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto">
-<span class="rv-pop" data-rv="chips" style="font-size: 12px; padding: 7px 12px; border-radius: 999px; background: #F8ECEE; color: #8C4255">Guion + edición</span>
-<span class="rv-pop" data-rv="chips" style="font-size: 12px; padding: 7px 12px; border-radius: 999px; background: #F8ECEE; color: #8C4255">Menciones en historias</span>
-<span class="rv-pop" data-rv="chips" style="font-size: 12px; padding: 7px 12px; border-radius: 999px; background: #F8ECEE; color: #8C4255">60 días en el feed</span>
-<span class="rv-pop" data-rv="chips" style="font-size: 12px; padding: 7px 12px; border-radius: 999px; background: #F8ECEE; color: #8C4255">Opción de colab</span>
-</div>
-</article>
-<article class="lift rv d1" data-rv="s2" style="background: #FFFFFF; border: 1px solid rgba(191,104,117,0.18); border-radius: 28px; padding: clamp(24px, 5vw, 34px); display: flex; flex-direction: column; gap: 16px">
-<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
-<h3 class="serif" style="margin: 0; font-size: clamp(28px, 4vw, 34px); line-height: 1.05; color: #A9546A">Mención en historias</h3>
-<span style="display: flex; align-items: baseline; gap: 4px"><span class="num" style="font-size: clamp(34px, 5vw, 40px); font-weight: 600; letter-spacing: -0.03em; color: #7E3346; line-height: 1">$10</span><span style="font-size: 13px; color: #8C4255">c/u</span></span>
-</div>
-<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #5B3940; font-weight: 300">Mención suelta en historias: una forma ágil de llevar tu marca a la comunidad.</p>
-<div class="stag" style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto">
-<span class="rv-pop" data-rv="chips" style="font-size: 12px; padding: 7px 12px; border-radius: 999px; background: #F8ECEE; color: #8C4255">Rápida activación</span>
-<span class="rv-pop" data-rv="chips" style="font-size: 12px; padding: 7px 12px; border-radius: 999px; background: #F8ECEE; color: #8C4255">Por unidad</span>
-</div>
-</article>
-</div>
-</div>
-
-<div class="sgrp sg2">
-<article class="rv" data-rv="sModel" style="background: #F8ECEE; border-radius: 30px; padding: clamp(24px, 5vw, 40px); display: flex; flex-direction: column; gap: 24px">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px">
-<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
-<h3 class="serif" style="margin: 0; font-size: clamp(32px, 4.5vw, 40px); line-height: 1.05; color: #A9546A">Modelo e imagen comercial</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #5B3940; font-weight: 300; max-width: 560px">Participación como modelo para fotografía o video cuando el cliente o agencia ya cuenta con su propio equipo de producción y edición.</p>
-</div>
-<p style="flex: 0 1 320px; margin: 0; font-size: 13px; line-height: 1.6; color: #6B3A45; align-self: flex-end">¿Sin equipo? Puedo incluir al equipo de la agencia con un costo adicional.</p>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(190px, 100%), 1fr)); gap: 12px">
-<div class="lift rv-pop d1" data-rv="sm1" style="background: #FFFFFF; border-radius: 22px; padding: 22px 24px; display: flex; flex-direction: column; gap: 6px">
-<span class="num" style="font-size: 42px; font-weight: 600; letter-spacing: -0.03em; color: #7E3346; line-height: 1">$40</span>
-<span style="font-size: 14px; color: #5B3940">1 video</span>
-</div>
-<div class="lift rv-pop d2" data-rv="sm2" style="background: #FFFFFF; border-radius: 22px; padding: 22px 24px; display: flex; flex-direction: column; gap: 6px">
-<span class="num" style="font-size: 42px; font-weight: 600; letter-spacing: -0.03em; color: #7E3346; line-height: 1">$90</span>
-<span style="font-size: 14px; color: #5B3940">Paquete de 3 videos</span>
-<span style="font-size: 12px; color: #8C4255">$30 por video</span>
-</div>
-<div class="lift rv-pop d3" data-rv="sm3" style="background: #A9546A; color: #FFFFFF; border-radius: 22px; padding: 22px 24px; display: flex; flex-direction: column; gap: 6px; position: relative">
-<span style="position: absolute; top: 16px; right: 16px; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; background: rgba(255,255,255,0.18)">Más elegido</span>
-<span class="num" style="font-size: 42px; font-weight: 600; letter-spacing: -0.03em; line-height: 1">$125</span>
-<span style="font-size: 14px; color: #FFF4F6">Paquete de 5 videos</span>
-<span style="font-size: 12px; color: #FFF4F6">$25 por video</span>
-<ul style="margin: 12px 0 0; padding: 12px 0 0; border-top: 1px solid rgba(255,255,255,0.25); list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 13px; line-height: 1.5; color: #FFFFFF">
-<li style="display: flex; gap: 8px; align-items: flex-start"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 2px"><path d="M5 12l5 5L20 7"></path></svg><span>Grabación en hasta 2 visitas</span></li>
-<li style="display: flex; gap: 8px; align-items: flex-start"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 2px"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg><span>Opción de colab en 1 video: <strong style="font-weight: 600">+$55</strong>*</span></li>
-</ul>
-</div>
-</div>
-<p class="rv-l" data-rv="modL" style="margin: 0; font-size: 13px; line-height: 1.6; color: #6B3A45">*Colab: el video aparece en tu feed y en el mío. Permanece publicado 60 días y debe ir acorde al contenido de mi cuenta.</p>
-</article>
-</div>
-
-<div class="sgrp sg3">
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 16px">
-<article class="lift rv" data-rv="sEmb" style="background: #FFFFFF; border: 1px solid rgba(191,104,117,0.18); border-radius: 28px; padding: clamp(24px, 5vw, 36px); display: flex; flex-direction: column; gap: 18px">
-<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
-<div style="display: flex; flex-direction: column; gap: 6px">
-<span style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #8C4255">Mensual</span>
-<h3 class="serif" style="margin: 0; font-size: clamp(30px, 4vw, 36px); line-height: 1.05; color: #A9546A">Embajadora de marca</h3>
-</div>
-<span style="display: flex; flex-direction: column; align-items: flex-end"><span class="num" style="font-size: clamp(36px, 5vw, 44px); font-weight: 600; letter-spacing: -0.03em; color: #7E3346; line-height: 1">$300</span><span style="font-size: 13px; color: #8C4255">/ mes</span></span>
-</div>
-<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #5B3940; font-weight: 300">Uso de imagen como embajadora oficial por 1 mes.</p>
-<ul class="stag" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 14px; color: #4B2E35">
-<li class="rv-l" data-rv="embL" style="display: flex; gap: 10px; align-items: flex-start"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A9546A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M5 12l5 5L20 7"></path></svg>2 visitas al mes (hasta 5 h c/u)</li>
-<li class="rv-l" data-rv="embL" style="display: flex; gap: 10px; align-items: flex-start"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A9546A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M5 12l5 5L20 7"></path></svg>Creación de contenido</li>
-<li class="rv-l" data-rv="embL" style="display: flex; gap: 10px; align-items: flex-start"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A9546A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M5 12l5 5L20 7"></path></svg>Menciones en historias</li>
-<li class="rv-l" data-rv="embL" style="display: flex; gap: 10px; align-items: flex-start"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A9546A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M5 12l5 5L20 7"></path></svg>Recomendación orgánica a la comunidad</li>
-<li class="rv-l" data-rv="embL" style="display: flex; gap: 10px; align-items: flex-start"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A9546A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M5 12l5 5L20 7"></path></svg>Exclusividad de rubro</li>
-<li class="rv-l" data-rv="embL" style="display: flex; gap: 10px; align-items: flex-start"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A9546A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M5 12l5 5L20 7"></path></svg>Opción de un video en colab (aparece en tu feed y en el mío)</li>
-</ul>
-</article>
-<article class="lift rv d1" data-rv="sAli" style="position: relative; background: linear-gradient(160deg, #A9546A 0%, #8C4255 100%); color: #FFFFFF; border-radius: 28px; padding: clamp(24px, 5vw, 36px); display: flex; flex-direction: column; gap: 18px; overflow: hidden">
-<div aria-hidden="true" style="position: absolute; right: -80px; bottom: -80px; width: 260px; height: 260px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.22)"></div>
-<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
-<div style="display: flex; flex-direction: column; gap: 6px">
-<span style="align-self: flex-start; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; background: rgba(255,255,255,0.18)">Ahorras $400</span>
-<h3 class="serif" style="margin: 0; font-size: clamp(30px, 4vw, 36px); line-height: 1.05">Alianza de 3 meses</h3>
-</div>
-<span style="display: flex; flex-direction: column; align-items: flex-end"><span class="num" style="font-size: clamp(36px, 5vw, 44px); font-weight: 600; letter-spacing: -0.03em; line-height: 1">$500</span><span style="font-size: 13px; color: #FFF4F6">total</span></span>
-</div>
-<div style="position: relative; display: flex; gap: 12px; align-items: flex-start; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.28); border-radius: 18px; padding: 14px 16px">
-<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><rect x="3" y="6" width="18" height="13" rx="2.5"></rect><path d="M3 10.5h18"></path><path d="M7 15h3"></path></svg>
-<span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 15px; font-weight: 600">Sin pagar todo de una vez</strong><span style="font-size: 13px; line-height: 1.55; color: #FFF4F6">Divide el pago en cuotas mensuales o quincenales, como mejor nos convenga a ambas partes. Equivale a menos de $170 al mes.</span></span>
-</div>
-<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #FFF4F6; font-weight: 300">Todos los beneficios del plan de embajadora, con presencia continua y exclusividad total frente a la competencia durante 3 meses.</p>
-<ul class="stag" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 14px">
-<li class="rv-l" data-rv="aliL" style="display: flex; gap: 10px; align-items: flex-start"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M5 12l5 5L20 7"></path></svg>Todo lo del plan mensual</li>
-<li class="rv-l" data-rv="aliL" style="display: flex; gap: 10px; align-items: flex-start"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M5 12l5 5L20 7"></path></svg>Presencia continua por 3 meses</li>
-<li class="rv-l" data-rv="aliL" style="display: flex; gap: 10px; align-items: flex-start"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M5 12l5 5L20 7"></path></svg>Exclusividad total frente a la competencia</li></ul>
-<a href="#contacto" class="btn" style="margin-top: auto; align-self: flex-start; display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: #FFFFFF; color: #8C4255; text-decoration: none; font-size: 14px; font-weight: 600">Quiero esta alianza</a>
-</article>
-</div>
-</div>
-
-<div class="sgrp sg4">
-<article class="rv" data-rv="sProm" style="background: #FFFFFF; border: 1px solid rgba(191,104,117,0.18); border-radius: 28px; padding: clamp(24px, 5vw, 36px); display: flex; flex-wrap: wrap; gap: 22px; align-items: center">
-<div style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
-<span style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #8C4255">Eventos y activaciones</span>
-<h3 class="serif" style="margin: 0; font-size: clamp(30px, 4vw, 36px); line-height: 1.05; color: #A9546A">Promotora / Impulsadora</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #5B3940; font-weight: 300">Tarifa según el calzado, el lugar y el horario de la jornada.</p>
-</div>
-<div style="flex: 0 1 auto; display: flex; flex-direction: column; align-items: flex-start; gap: 2px">
-<span class="num" style="font-size: clamp(36px, 5vw, 44px); font-weight: 600; letter-spacing: -0.03em; color: #7E3346; line-height: 1">$12–15</span>
-<span style="font-size: 13px; color: #8C4255">por hora</span>
-</div>
-<div class="stag" style="flex: 1 1 100%; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 12px; padding-top: 20px; border-top: 1px solid rgba(191,104,117,0.18)">
-<div class="rv-l" data-rv="promL" style="display: flex; gap: 12px; align-items: flex-start; font-size: 14px; line-height: 1.6; color: #5B3940"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A9546A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 2px"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><span><strong style="font-weight: 600; color: #4B2E35">Mínimo 3 horas</strong> de contratación.</span></div>
-<div class="rv-l" data-rv="promL" style="display: flex; gap: 12px; align-items: flex-start; font-size: 14px; line-height: 1.6; color: #5B3940"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A9546A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 2px"><path d="M4 11h16"></path><path d="M6 11a6 6 0 0 1 12 0"></path><path d="M5 15h14"></path></svg><span>Jornadas de más de 5 horas o en horario de comida incluyen <strong style="font-weight: 600; color: #4B2E35">almuerzo o cena</strong> a cargo del cliente.</span></div>
-</div>
-</article>
-</div>
-</div>
-
-<p class="snote rv" data-rv="sNote" style="margin: 0; display: flex; align-items: center; justify-content: center; gap: 8px; text-align: center; font-size: 13px; line-height: 1.6; color: #6B3A45"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A9546A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 8h.01"></path></svg><span>Precios en dólares (USD). Pago en bolívares a tasa BCV del día.</span></p>
 </div>
 </section>
 
@@ -865,7 +862,7 @@ Escríbeme por WhatsApp
       if (!e.isIntersecting) return;
       var el = e.target; co.unobserve(el);
       if (el.classList.contains('cnt')) {
-        animate(function (p) { fmt(el, p); }, 2200, el.closest('#inicio') ? 900 : 250);
+        animate(function (p) { fmt(el, p); }, 2200, el.closest('#inicio') ? 400 : 250);
       } else {
         animate(function (p) { el.style.setProperty('--p', p); }, 2000, 300);
       }
