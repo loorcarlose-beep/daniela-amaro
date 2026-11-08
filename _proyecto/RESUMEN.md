@@ -258,6 +258,6 @@ Hay seis reels de colaboraciones con marcas. Se ven como tarjetas con el video e
 - **`originales/`:**
   - El PDF del media kit.
   - Fotos en alta calidad.
-  - Videos originales de los reels y del inicio.
+  - Video original del inicio (los reels ya están en `assets/`).
   - Logos SVG de las marcas.
   - Imágenes del perfil.
